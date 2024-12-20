@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="title" content="BlueSky Video Downloader | Download Videos from BlueSky">
+    <meta name="description" content="Use our free BlueSky Video Downloader to save videos instantly in high quality. Quick, easy, and no software needed—download your favorite BlueSky videos now!">
+    <meta name="keywords" content="BlueSky Video Downloader, Download BlueSky Videos, Free BlueSky Video Downloader, Save Videos from BlueSky">
+    <title>BlueSky Video Downloader | Download Videos from BlueSky</title>
+
+    <link rel="icon" type="image/x-icon" href="images/bluesky_downloader_logo.png" />
+    <link type="text/css" rel="stylesheet" href="css/style.css" />
+    <link rel="canonical" href="https://www.aaaenos.com/tools/bluesky-downloader/" />
+    <!--CDN's-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+    <!-- Facebook Meta Tags -->
+    <meta property="og:url" content="https://www.aaaenos.com/tools/bluesky-downloader/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="BlueSky Video Downloader | Download Videos from BlueSky">
+    <meta property="og:description" content="Download free high-quality (HD) video from BlueSky">
+    <meta property="og:image" content="https://www.aaaenos.com/tools/bluesky-downloader/images/bluesky_downloader_logo.png">
+
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="aaaenos.com">
+    <meta property="twitter:url" content="https://www.aaaenos.com/tools/bluesky-downloader/">
+    <meta name="twitter:title" content="BlueSky Video Downloader">
+    <meta name="twitter:description" content="Download free high-quality (HD) video from BlueSky">
+    <meta name="twitter:image" content="https://www.aaaenos.com/tools/bluesky-downloader/images/bluesky_downloader_logo.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "BlueSky Video Downloader",
+            "url": "https://www.aaaenos.com/tools/bluesky-downloader/",
+            "description": "A free tool to download videos from BlueSky in high quality.",
+            "applicationCategory": "MultimediaApplication",
+            "operatingSystem": "All",
+            "creator": {
+                "@type": "Organization",
+                "name": "AAAeNOS Tools"
+            }
+        }
+    </script>
+
+    <!--Google Analytics code-->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1WVW5BZF5V"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-1WVW5BZF5V');
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="navcontainer">
+                <div class="nav_parent">
+                    <div class="nav_child">
+                        <strong class="logo_link">AAAENOS</strong>
+                    </div>
+                    <div class="nav_child nav_links_desk">
+                        <div class="humburg_container">
+                            <span><i class="bi bi-share"></i></span>
+                            <span><i class="bi bi-list"></i></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mobile_nav_links">
+                    <span><a href="https://www.aaaenos.com/en/">Blog</a></span>
+                    <span><a href="https://www.aaaenos.com/tools/">Tools</a></span>
+                    <span><a href="https://www.aaaenos.com/en/contact-us/">Contact</a></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- paste link input area  -->
+    <div class="input_area">
+        <div class="input_parent">
+            <form method="post" id="download_threads_media_frm">
+                <!-- heading and short desc  -->
+                <div class="heading_and_short_para">
+                    <h1 class="heading_txt">BlueSky Video Downloader</h1>
+                    <p class="short_para">to download BlueSky video - copy the video post URL from BlueSky and paste it here.</p>
+                </div>
+
+                <!-- input and download button  -->
+                <div class="input_fields_area_parent">
+                    <div class="input_field_parent">
+                        <input class="input_field_cls" id="url" type="text" minlength="5" maxlength="200"
+                            placeholder="Paste Video Link Here" required />
+                        <button class="dnd_button">Load Video</button>
+                    </div>
+                </div>
+
+                <!-- progress bar  -->
+                <div id="progress_bar">
+                    <div></div>
+                </div>
+            </form>
+        </div>
+        <div class="animation_parent_bxes">
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+            <div class="have_a_question_animation"></div>
+        </div>
+    </div>
+
+    <!-- fetched video here  -->
+    <div class="fetched_media_container">
+        <div class="fetched_video_outdoor">
+            <div class="fetched_media_parent">
+                <div class="fetched_media_child">
+                    <div class="img_container">
+                        <img class="thumbnail img_cls" src="images/loading.webp" />
+                    </div>
+                </div>
+                <div class="fetched_media_child">
+                    <div class="download_link_btn">
+                        <a href="#" class="download_link" target="_blank">Download</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- learn how to download  -->
+    <div class="how_to_download_container">
+        <div class="documention_for_download_parent">
+            <div class="header">
+                <div class="texts">
+                    <h2 class="heading_txt">How to download BlueSky Video?</h2>
+                </div>
+                <div class="hide_show">
+                    <span class="navigation_span_container"><i class="bi bi-chevron-up"></i></span>
+                </div>
+            </div>
+            <div class="content show">
+                <div class="img_parent">
+                    <div class="img_child">
+                        <span>Step 1: Click on 3 dots</span>
+                        <img src="images/loading.webp" data-src="images/click_on_3_dots.jpg"
+                            alt="bluesky video download steps click on 3 dots" />
+                    </div>
+
+                    <div class="img_child">
+                        <span>Step 2: Click on share</span>
+                        <img src="images/loading.webp" data-src="images/click_on_share.jpg"
+                            alt="bluesky video download - click on share" />
+                    </div>
+
+                    <div class="img_child">
+                        <span>Step 3: Copy the link</span>
+                        <img src="images/loading.webp" data-src="images/copy_link.jpg"
+                            alt="bluesky video download - click on copy" />
+                    </div>
+
+                    <div class="img_child">
+                        <span>Step 4: Paste -> Load -> Download</span>
+                        <img src="images/loading.webp" data-src="images/paste_load_download.jpg" alt="bluesky video download - paste and download" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- faq  -->
+    <div class="heading_cls">
+        <h3 class="heading_one heading_two">FAQs</h3>
+        <span class="nearheadin_span">Clear Your Doubts by FAQs</span>
+    </div>
+
+    <div class="container faq_container my-3">
+        <div class="faq_parent_ul">
+            <div class="li">
+                <input type="radio" name="per_item_faq" id="faq_child_1" />
+                <label for="faq_child_1">What is BlueSky Video Downloader?</label>
+                <div class="ans_content">
+                    <p>BlueSky Video Downloader is a free online tool that allows you to download videos from BlueSky in high quality. No software installation is required—just paste the video URL and download it instantly.</p>
+                </div>
+            </div>
+
+            <div class="li">
+                <input type="radio" name="per_item_faq" id="faq_child_2" />
+                <label for="faq_child_2">How do I download videos from BlueSky?</label>
+                <div class="ans_content">
+                    <p>
+                        Copy the URL of the BlueSky video you want to download. -> 
+                        Paste the URL into the input box on our BlueSky Video Downloader page. -> 
+                        Click on the "Download" button. -> 
+                        Save the video file to your device.
+                    </p>
+                </div>
+            </div>
+
+            <div class="li">
+                <input type="radio" name="per_item_faq" id="faq_child_4" />
+                <label for="faq_child_4">Is BlueSky Video Downloader free to use?</label>
+                <div class="ans_content">
+                    <p>Yes! BlueSky Video Downloader is completely free to use. You can download as many videos as you want without any restrictions.</p>
+                </div>
+            </div>
+
+            <div class="li">
+                <input type="radio" name="per_item_faq" id="faq_child_5" />
+                <label for="faq_child_5">Do I need to create an account to download videos?</label>
+                <div class="ans_content">
+                    <p>No, you don't need to create an account. Our downloader is 100% free and does not require any sign-up or login.</p>
+                </div>
+            </div>
+
+            <div class="li">
+                <input type="radio" name="per_item_faq" id="faq_child_6" />
+                <label for="faq_child_6">What devices are compatible with BlueSky Video Downloader?</label>
+                <div class="ans_content">
+                    <p>Our downloader works on all devices, including desktops, laptops, tablets, and smartphones. It is compatible with popular operating systems like Windows, macOS, Android, and iOS.</p>
+                </div>
+            </div>
+
+            <div class="li">
+                <input type="radio" name="per_item_faq" id="faq_child_7" />
+                <label for="faq_child_7">Is it safe to use BlueSky Video Downloader?</label>
+                <div class="ans_content">
+                    <p>Yes, our tool is safe to use. We do not store your downloads or share your data with third parties. All downloads are processed securely.</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- footer  -->
+    <footer>
+        <div class="footer_parent">
+            <div class="footer_child">
+                <strong>AAAENOS</strong>
+            </div>
+            <div class="footer_child">
+                <span><a href="https://www.aaaenos.com/en/summit-guest-post-or-ads/"> Advertisement</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- error message display  -->
+    <div class="error_message_parent">
+        <span class="message_details">This is Error Message</span>
+        <span class="close_btn">x</span>
+    </div>
+
+
+    <!-- javascript  -->
+    <script src="javascript/js.js"></script>
+</body>
+
+</html>
