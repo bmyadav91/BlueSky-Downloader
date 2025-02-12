@@ -1,0 +1,23 @@
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" version="1.1" id="svg822" inkscape:version="0.92.4 (f8dce91, 2019-08-02)" sodipodi:docname="paste.svg" viewBox="5 3 22 24.16">
+  <defs id="defs816">
+    <inkscape:path-effect effect="bspline" id="path-effect1025" is_visible="true" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+    <inkscape:path-effect effect="bspline" id="path-effect1021" is_visible="true" weight="33.333333" steps="2" helper_size="0" apply_no_weight="true" apply_with_weight="true" only_selected="false"/>
+  </defs>
+  <sodipodi:namedview id="base" pagecolor="#ffffff" bordercolor="#666666" borderopacity="1.0" inkscape:pageopacity="0.0" inkscape:pageshadow="2" inkscape:zoom="8.9166665" inkscape:cx="-5.4699533" inkscape:cy="15.474912" inkscape:document-units="px" inkscape:current-layer="layer1" showgrid="true" units="px" inkscape:window-width="1366" inkscape:window-height="713" inkscape:window-x="0" inkscape:window-y="0" inkscape:window-maximized="1" showguides="false">
+    <inkscape:grid type="xygrid" id="grid816"/>
+  </sodipodi:namedview>
+  <metadata id="metadata819">
+    <rdf:RDF>
+      <cc:Work rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:title>
+
+</dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g inkscape:label="Layer 1" inkscape:groupmode="layer" id="layer1" transform="translate(0,-289.0625)">
+    <path style="opacity:1;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.5;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" d="M 11 3 C 10.446 3 10 3.446 10 4 C 10 4.554 10.446 5 11 5 L 15 5 C 15.554 5 16 4.554 16 4 C 16 3.446 15.554 3 15 3 L 11 3 z M 6 4 C 5.446 4 5 4.446 5 5 L 5 23 C 5 23.554 5.446 24 6 24 L 14 24 L 14 15.597656 L 19.728516 10 L 21 10 L 21 5 C 21 4.446 20.554 4 20 4 L 18 4 L 18 6 C 18 6.554 17.554 7 17 7 L 9 7 C 8.446 7 8 6.554 8 6 L 8 4 L 6 4 z M 21.349609 14 L 17 18.292969 L 17 26.060547 C 17 26.667947 17.495773 27.15625 18.111328 27.15625 L 25.888672 27.15625 C 26.504228 27.15625 27 26.667947 27 26.060547 L 27 15.095703 C 27 14.488303 26.504228 14 25.888672 14 L 21.349609 14 z " transform="translate(0,289.0625)" id="rect1018"/>
+  </g>
+</svg>

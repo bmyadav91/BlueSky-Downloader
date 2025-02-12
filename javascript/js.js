@@ -5,22 +5,6 @@ humburg_icon.addEventListener("click", function () {
     mobile_nav_container.classList.toggle("show");
 });
 
-// how to download video content hide and show 
-const how_tow_dnd_header = document.querySelector(".documention_for_download_parent .header");
-const how_to_dnd_content = document.querySelector(".documention_for_download_parent .content");
-const show_hide_icon = document.querySelector(".documention_for_download_parent .hide_show .navigation_span_container i");
-how_tow_dnd_header.addEventListener("click", function () {
-    how_to_dnd_content.classList.toggle("show");
-    if (show_hide_icon.classList.contains('bi-chevron-down')) {
-        show_hide_icon.classList.remove('bi-chevron-down');
-        show_hide_icon.classList.add('bi-chevron-up');
-    } else {
-        show_hide_icon.classList.add('bi-chevron-down');
-        show_hide_icon.classList.remove('bi-chevron-up');
-    }
-});
-
-
 // pass error here - in global varibale error_one
 var dnd_submit_btn = document.querySelector('.dnd_button');
 // dnd button disabled function 
@@ -68,27 +52,19 @@ function ErrorDisplay(message) {
 // ----------------------------------download section-------------------------------------
 
 function extractPostInfo(url) {
-    const match = url.match(/^https:\/\/bsky\.app\/profile\/([^/]+)\/post\/([^/]+)$/);
+    const match = url.match(/^https:\/\/pinksky\.app\/profile\/(did:[^/]+\/app\.bsky\.feed\.post)\/([^/]+)$/);
     if (match) {
         return {
-            handle: match[1],
+            did: match[1],
             rkey: match[2],
         };
     }
-    ErrorDisplay('Invalid Bluesky post URL');
-}
-
-async function getDidFromHandle(handle) {
-    const response = await fetch(`https://public.api.bsky.app/xrpc/com.atproto.identity.resolveHandle?handle=${handle}`);
-    if (!response.ok) {
-        ErrorDisplay(`Failed to resolve handle: ${handle}`);
-    }
-    const data = await response.json();
-    return data.did;
+    ErrorDisplay('Invalid post URL');
+    return null;
 }
 
 async function getVideoInfoFromPost(did, rkey) {
-    const postUri = `at://${did}/app.bsky.feed.post/${rkey}`;
+    const postUri = `at://${did}/${rkey}`;
     const encodedUri = encodeURIComponent(postUri);
     const response = await fetch(`https://public.api.bsky.app/xrpc/app.bsky.feed.getPostThread?uri=${encodedUri}&depth=0`);
 
@@ -180,8 +156,7 @@ async function downloadAndProcessVideo(masterPlaylistUrl, progressCallback) {
 
 async function processBlueskyVideo(postUrl, progressCallback) {
     try {
-        const { handle, rkey } = extractPostInfo(postUrl);
-        const did = await getDidFromHandle(handle);
+        const { did, rkey } = extractPostInfo(postUrl);
         const videoInfo = await getVideoInfoFromPost(did, rkey);
 
         if (!videoInfo) {
